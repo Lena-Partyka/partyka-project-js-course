@@ -1,0 +1,1 @@
+# partyka-project-js-course
