@@ -16,6 +16,21 @@
   font-family: 'Bangers', cursive;
 }
 
-#layer1, #layer2, #layer3, #layer4, #player, #angler1, #angler2, #lucky, #projectile, #gears, #hivewhale, #drone, #smokeExplosion, fireExplosion {
+ .wrapperButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#button_Start, #button_Rules {
+  width: 50px;
+  height: 20px;
+}
+
+#layer1, #layer2, #layer3, #layer4, #player, #angler1, #angler2, #lucky, #projectile, #gears, #hivewhale, #drone, #smokeExplosion, #fireExplosion {
+  display: none;
+}
+
+.hide {
   display: none;
 }
