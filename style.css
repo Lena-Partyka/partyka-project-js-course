@@ -4,6 +4,81 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#mainPage {
+  height: 100vh;
+  padding: 150px 0 0 0;
+  background: url(/img/background.jpg);
+  background-size: cover;
+}
+
+p {
+  padding: 0 0 50px 0;
+  color: white;
+  text-shadow: -1px -1px 0 #1A0057,
+  -2px -2px 1px #1A0057;
+  font-family: 'Bangers', cursive;
+  font-size: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+}
+
+#startButton, .main-menu-wrapper, .main-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  padding: 16px;
+  color: white;
+  text-shadow: -1px -1px 0 #1A0057,
+  -2px -2px 1px #1A0057;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 50px;
+}
+
+div {
+  padding: 16px;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 30px;
+}
+
+@media (max-width: 48rem) {
+  div {
+    font-size: 16px;
+  }
+}
+
+#startButton, #buttonBack,
+#start, #aboutUsButton, #rulesButton {
+  margin: 0 0 10px 0;
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  color: white;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #442E7D 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  font-family: 'Bangers', cursive;
+  font-size: 25px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#startButton:hover, #buttonBack:hover,
+#start:hover, #aboutUsButton:hover, #rulesButton:hover {
+  background-position: right center;
+}
+
 #canvas1 {
   border: 5px solid black;
   position: absolute;
@@ -14,17 +89,6 @@
   max-width: 100%;
   max-height: 100%;
   font-family: 'Bangers', cursive;
-}
-
- .wrapperButton{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#button_Start, #button_Rules {
-  width: 50px;
-  height: 20px;
 }
 
 #layer1, #layer2, #layer3, #layer4, #player, #angler1, #angler2, #lucky, #projectile, #gears, #hivewhale, #drone, #smokeExplosion, #fireExplosion {

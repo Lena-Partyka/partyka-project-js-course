@@ -1,7 +1,9 @@
+'use strict';
 // let canvas;
 // let ctx;
 // let game;
 // let lastTime;
+let buttonBack;
 
 function lounchGame() {
   const canvas = document.getElementById('canvas1');
@@ -9,18 +11,14 @@ function lounchGame() {
   canvas.width = 1500;
   canvas.height = 700;
 
-  function createButton(buttonType) {
-    let button = document.createElement('button');
-    button.id = 'button_' + buttonType;
-    return button;
+  function createButton() {
+    let buttonBack = document.createElement('button');
+    buttonBack.id = 'buttonBack';
+    buttonBack.textContent = 'MAIN PAGE';
+    document.body.appendChild(buttonBack);
   }
 
-  /*let wrapperButton = document.createElement('div');
-  wrapperButton.className = 'wrapperButton';
-  document.body.appendChild(wrapperButton);
-
-  wrapperButton.appendChild(createButton('Start'));
-  wrapperButton.appendChild(createButton('Rules'));*/
+  createButton();
 
   class Game {
     constructor(width, height) {
@@ -158,6 +156,16 @@ function lounchGame() {
     //document.getElementById('button_Start').addEventListener('click', () => (game.update(deltaTime)));
     game.update(deltaTime);
     requestAnimationFrame(animate);
+  }
+
+  buttonBack = document.getElementById('buttonBack');
+  buttonBack.addEventListener('click', backMainPage);
+
+  function backMainPage() {
+    mainPage.classList.remove('hide');
+    canv.classList.add('hide');
+    buttonBack.style.display = 'none';
+    SwitchToMain();
   }
 
   animate(0); // callback имеет один аргумент - время, прошедшее с момента начала загрузки страницы в миллисекундах

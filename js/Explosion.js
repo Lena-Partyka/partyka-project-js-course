@@ -1,3 +1,4 @@
+'use strict';
 // спецэффекты
 class Explosion {
   constructor(game, x, y) {
@@ -15,6 +16,7 @@ class Explosion {
     this.markedForDeletion = false;
     this.maxFrame = 8;
   }
+
   update(deltaTime) {
     this.x -= this.game.speed;
     if (this.timer > this.interval) {
@@ -25,6 +27,7 @@ class Explosion {
     }
     if (this.frameX > this.maxFrame) this.markedForDeletion = true;
   }
+
   draw(context) {
     context.drawImage(this.image, this.frameX * this.spriteWidth, 0, this.spriteWidth, this.spriteHeight, this.x, this.y, this.width, this.height);
   }

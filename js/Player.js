@@ -1,3 +1,4 @@
+'use strict';
 //игрок
 class Player {
   constructor(game) {

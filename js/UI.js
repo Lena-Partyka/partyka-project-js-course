@@ -1,3 +1,4 @@
+'use strict';
 //счет...
 class UI {
   constructor(game) {
@@ -6,6 +7,7 @@ class UI {
     this.fontFamily = 'Bangers';
     this.color = 'white';
   }
+
   draw(context) {
     context.save();
     context.fillStyle = this.color;
@@ -27,13 +29,13 @@ class UI {
         message1 = 'You win!';
         message2 = 'Great!';
       } else {
-        message1 = 'Ты проиграл!';
-        message2 = 'Попробуй снова!';
+        message1 = 'You lost!';
+        message2 = 'Try again!';
       }
+      context.font = '150px ' + this.fontFamily;
+      context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 35);
       context.font = '70px ' + this.fontFamily;
-      context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 20);
-      context.font = '25px ' + this.fontFamily;
-      context.fillText(message2, this.game.width * 0.5, this.game.height * 0.5 + 20);
+      context.fillText(message2, this.game.width * 0.5, this.game.height * 0.5 + 35);
     }
     //ammo
     if (this.game.player.powerUp)  context.fillStyle = '#ffffbd';

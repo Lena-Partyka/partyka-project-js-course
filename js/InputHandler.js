@@ -1,3 +1,4 @@
+'use strict';
 //управление
 class InputHandler {
   constructor(game) {
@@ -12,6 +13,7 @@ class InputHandler {
         this.game.debug = !this.game.debug;
       }
     });
+
     window.addEventListener('keyup', e => {
       if (this.game.keys.indexOf(e.key) > -1) {
         this.game.keys.splice(this.game.keys.indexOf(e.key), 1);

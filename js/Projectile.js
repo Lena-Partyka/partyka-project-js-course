@@ -1,3 +1,4 @@
+'use strict';
 //снаряды
 class Projectile {
   constructor(game, x, y) {
@@ -10,10 +11,12 @@ class Projectile {
     this.markedForDeletion = false;
     this.image = document.getElementById('projectile');
   }
+
   update() {
     this.x += this.speed;
     if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
   }
+
   draw(context) {
     context.drawImage(this.image, this.x, this.y);
   }

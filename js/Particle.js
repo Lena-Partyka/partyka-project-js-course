@@ -1,3 +1,4 @@
+'use strict';
 // шестеренки, оставшиеся от врагов
 class Particle {
   constructor(game, x, y) {

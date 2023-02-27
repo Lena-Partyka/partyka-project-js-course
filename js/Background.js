@@ -1,3 +1,4 @@
+'use strict';
 //весь бэкграунд
 class Background {
   constructor(game) {
@@ -12,9 +13,11 @@ class Background {
     this.layer4 = new Layer(this.game, this.image4, 1.5);
     this.layers = [this.layer1, this.layer2, this.layer3];
   }
+
   update() {
     this.layers.forEach(layer => layer.update());
   }
+
   draw(context) {
     this.layers.forEach(layer => layer.draw(context));
   }
